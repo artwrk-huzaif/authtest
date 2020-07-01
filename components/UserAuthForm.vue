@@ -31,13 +31,13 @@
         showPassword: false,
         hasName: false,
         userInfo: {
-          email: '',
-          password: ''
+          email: 'eve.holt@reqres.in',
+          password: 'cityslicka'
         },
         ...validations
       }
     },
-    props: ["submitForm", "buttonText", ]
+    props: ["submitForm", "buttonText", "hasName"]
   }
 </script>
 

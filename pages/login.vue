@@ -12,12 +12,17 @@ export default {
         UserAuthForm
     },
 
-    methods:{
-        loginUser(userinfo){
-            debugger
-            alert('You Pressed Button')
-        }
+  methods: {
+    async loginUser(userinfo) {
+        
+      try {
+        let response = await this.$auth.loginWith('local', { data: userinfo })
+        console.log(response)
+      } catch (err) {
+        console.log(err)
+      }
     }
+  }
 
 }
 </script>

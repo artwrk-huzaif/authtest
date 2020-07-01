@@ -82,5 +82,29 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
-  }
+  },
+
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: { url: '/login', method: 'post', propertyName: 'token' },
+          logout: { url: '/api/auth/logout', method: 'delete' },
+          user: { url: '/users', method: 'get', propertyName: false }
+        },
+        // tokenRequired: true,
+        // tokenType: 'bearer',
+        // globalToken: true,
+        // autoFetchUser: true
+      }
+    }
+  },
+
+  axios:{
+    baseURL:'https://reqres.in/api'
+  },
+
+  server:{
+    port:8000
+  },
 }
